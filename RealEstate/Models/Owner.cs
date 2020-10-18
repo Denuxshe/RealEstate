@@ -7,15 +7,16 @@ using System.Web;
 
 namespace RealEstate.Models
 {
-    [Table("Branch_tbl")]
-    public class Branch
+    [Table("Owner_tbl")]
+    public class Owner
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string branchNo { get; set; }
-        public string Street { get; set; }
-        public string city { get; set; }
-        public int postcode { get; set; }
+        public string ownerNo { get; set; }
+        public string fName { get; set; }
+        public string lName { get; set; }
+        public string address { get; set; }
+        public int telNo { get; set; }
 
     }
 }

@@ -11,7 +11,9 @@ namespace RealEstate.Models
     public class Staff
     {
         [Key]
-        public int staffNo { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
+        public string staffNo { get; set; }
         public string fName{ get; set; }
         public string lName { get; set; }
         public string position { get; set; }
@@ -19,7 +21,7 @@ namespace RealEstate.Models
         public int salary { get; set; }
 
         [ForeignKey("branch")]        
-        public int branchNo { get; set; }
+        public string branchNoRef { get; set; }
         public Branch branch { get; set; }
 
     }
