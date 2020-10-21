@@ -12,6 +12,8 @@ namespace RealEstate.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required(ErrorMessage = "Please fillup the ID", AllowEmptyStrings = false)]
+
         public string branchNo { get; set; }
         public string Street { get; set; }
         public string city { get; set; }

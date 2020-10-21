@@ -12,6 +12,8 @@ namespace RealEstate.Models
     {
         [Key] //denotes primary key
         [DatabaseGenerated(DatabaseGeneratedOption.None)] //prevent from auto numbering
+        [Required(ErrorMessage = "Please fillup the ID", AllowEmptyStrings = false)]
+
         public string propertyNo { get; set; }
         public string street { get; set; }
         public string city { get; set; }

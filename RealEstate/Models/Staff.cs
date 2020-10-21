@@ -12,11 +12,13 @@ namespace RealEstate.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
+        [Required(ErrorMessage = "Please fillup the ID", AllowEmptyStrings = false)]
         public string staffNo { get; set; }
         public string fName{ get; set; }
         public string lName { get; set; }
         public string position { get; set; }
+        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime dateOfBirth { get; set; }
         public int salary { get; set; }
 
