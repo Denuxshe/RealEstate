@@ -19,12 +19,17 @@ namespace RealEstate.Models
         public int rooms{ get; set; }
 
         [ForeignKey("owner")]
-        public string ownerNo  { get; set; }
+        public string ownerNoref  { get; set; }
         public Owner owner { get; set; }
 
         [ForeignKey("staff")]
-        public string staffNo { get; set; }
+        public string staffNoref { get; set; }
         public Staff staff { get; set; }
 
+        [ForeignKey("branch")]
+        public string branchNoRef { get; set; }
+        public Branch branch { get; set; }
+
+        public int rent { get; set; }
     }
 }

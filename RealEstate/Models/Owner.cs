@@ -16,7 +16,7 @@ namespace RealEstate.Models
         public string fName { get; set; }
         public string lName { get; set; }
         public string address { get; set; }
-        public int telNo { get; set; }
+        public string telNo { get; set; }
 
     }
 }

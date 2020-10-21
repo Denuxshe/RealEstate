@@ -15,7 +15,7 @@ namespace RealEstate.Models
         public string branchNo { get; set; }
         public string Street { get; set; }
         public string city { get; set; }
-        public int postcode { get; set; }
+        public string postcode { get; set; }
 
     }
 }
