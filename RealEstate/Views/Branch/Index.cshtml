@@ -1,4 +1,4 @@
-﻿@model RealEstate.Models.Branch
+﻿@model IEnumerable<RealEstate.Models.Branch>
 
 @{
     Layout = null;
@@ -12,39 +12,42 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
-        <h4>Branch</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Street)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Street)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.city)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.city)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.postcode)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.postcode)
-            </dd>
-    
-        </dl>
-    </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.branchNo }) |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Create New", "Create")
     </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.postcode)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.postcode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.branchNo }) |
+                @Html.ActionLink("Details", "Details", new { id=item.branchNo }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.branchNo })
+            </td>
+        </tr>
+    }
+    
+    </table>
 </body>
 </html>

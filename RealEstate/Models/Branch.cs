@@ -13,10 +13,14 @@ namespace RealEstate.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Required(ErrorMessage = "Please fillup the ID", AllowEmptyStrings = false)]
-
+        [Display(Name = "Branch No")]
         public string branchNo { get; set; }
+        [Display(Name = "Street")]
+
         public string Street { get; set; }
+        [Display(Name = "City")]
         public string city { get; set; }
+        [Display(Name = "Post Code")]
         public string postcode { get; set; }
 
     }

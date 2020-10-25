@@ -13,7 +13,7 @@ namespace RealEstate.Controllers
         // GET: Branch
         public ActionResult Index()
         {
-         //   Branch branches = realEContext.branchs;
+            List<Branch> branches = realEContext.branchs.ToList();
             return View(branches);
         }
         public ActionResult Create()
@@ -28,6 +28,40 @@ namespace RealEstate.Controllers
             realEContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Edit(String id)
+        {
+            Branch branches = realEContext.branchs.SingleOrDefault(x => x.branchNo == id);
+            return View(branches);
+        }
+        [HttpPost]
+        public ActionResult Edit(String id, Branch UpdateBranch)
+        {
+            Branch branches = realEContext.branchs.SingleOrDefault(x => x.branchNo == id);
+            branches.Street = UpdateBranch.Street;
+            branches.city= UpdateBranch.city;
+            branches.branchNo= UpdateBranch.branchNo;
+            realEContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(String id)
+        {
+            Branch branches = realEContext.branchs.SingleOrDefault(x => x.branchNo== id);
+            return View();
+        }
+        [HttpPost, ActionName("DeleteBranch")]
+        public ActionResult DeleteBranch(String id)
+        {
+            Branch branches = realEContext.branchs.SingleOrDefault(x => x.branchNo == id);
+            realEContext.branchs.Remove(branches);
+            realEContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Details(String id)
+        {
+            Branch branches = realEContext.branchs.SingleOrDefault(x => x.branchNo== id);
+            return View(branches);
+        }
+
 
     }
 }

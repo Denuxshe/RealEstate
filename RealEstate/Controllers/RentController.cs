@@ -20,6 +20,7 @@ namespace RealEstate.Controllers
             ViewBag.rentDetails = realEContext.rents;
             return View();
         }
+        [HttpPost]
         public ActionResult Create(Rent rent)
         {
             realEContext.rents.Add(rent);
