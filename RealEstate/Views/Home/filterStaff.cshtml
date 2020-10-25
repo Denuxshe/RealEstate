@@ -1,0 +1,36 @@
+﻿@model List<RealEstate.Models.Staff>
+@using RealEstate.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FilterStaff</title>
+</head>
+<body>
+    <div>
+        <h1>Filter Staff Details</h1>
+        <table border="2">
+            <tr>
+                <td>Staff Number</td>
+                <td>Staff Postion</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+            </tr>
+            @foreach (Staff staff in Model)
+            {
+                <tr>
+                    <td>@staff.staffNo</td>
+                    <td>@staff.fName</td>
+                    <td>@staff.lName</td>
+                    <td>@staff.position</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

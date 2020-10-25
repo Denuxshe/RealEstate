@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CreateStaff</title>
+    <title>Create</title>
 </head>
 <body>
     @using (Html.BeginForm()) 
@@ -69,27 +69,22 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.branchNoRef, "Branch No", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.branchNoRef, "branchNoRef", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.branchNoRef, new SelectList(ViewBag.branchDetails, "branchNo", "branchNo"), "Select the branch")
-                    @Html.ValidationMessageFor(model => model.branchNoRef, "", new { @class = "text-danger" })
-
-
-                  
-                </div>
+             @Html.DropDownListFor(model => model.branchNoRef, new SelectList(ViewBag.branchDetails, "branchNo", "branchNo"), "Select the branch")
+            @Html.ValidationMessageFor(model => model.branchNoRef, "", new { @class = "text-danger" })
+   </div>
             </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <br>
-                    <input type="submit" value="Add" class="btn btn-default" />
+                    <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
     
     <div>
-        <br>
         @Html.ActionLink("Back to List", "Index")
     </div>
 </body>

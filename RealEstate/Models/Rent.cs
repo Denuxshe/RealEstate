@@ -13,11 +13,19 @@ namespace RealEstate.Models
         [Key] //denotes primary key
         [DatabaseGenerated(DatabaseGeneratedOption.None)] //prevent from auto numbering
         [Required(ErrorMessage = "Please fillup the ID", AllowEmptyStrings = false)]
-
+        [Display(Name="Property Number")]
         public string propertyNo { get; set; }
+        [Display(Name = "Street")]
+
         public string street { get; set; }
+        [Display(Name = "City")]
+
         public string city { get; set; }
+        [Display(Name = "PType")]
+
         public string ptype { get; set; }
+        [Display(Name = "Rooms")]
+
         public int rooms{ get; set; }
 
         [ForeignKey("owner")]
