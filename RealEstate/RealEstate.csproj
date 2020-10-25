@@ -155,21 +155,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\OwnerController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010210433581_realestatev-1.cs" />
-    <Compile Include="Migrations\202010210433581_realestatev-1.designer.cs">
-      <DependentUpon>202010210433581_realestatev-1.cs</DependentUpon>
+    <Compile Include="Migrations\202010230920598_realestateV1.cs" />
+    <Compile Include="Migrations\202010230920598_realestateV1.Designer.cs">
+      <DependentUpon>202010230920598_realestateV1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010210448444_realestatev-2.cs" />
-    <Compile Include="Migrations\202010210448444_realestatev-2.designer.cs">
-      <DependentUpon>202010210448444_realestatev-2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010210514364_realestate.cs" />
-    <Compile Include="Migrations\202010210514364_realestate.Designer.cs">
-      <DependentUpon>202010210514364_realestate.cs</DependentUpon>
+    <Compile Include="Migrations\202010230934207_samplev1.cs" />
+    <Compile Include="Migrations\202010230934207_samplev1.Designer.cs">
+      <DependentUpon>202010230934207_samplev1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -191,7 +190,8 @@
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Home\CreateStaff.cshtml" />
     <Content Include="Views\Home\CreateRent.cshtml" />
-    <Content Include="Views\Home\CreateBranch.cshtml" />
+    <Content Include="Views\Branch\Create.cshtml" />
+    <Content Include="Views\Branch\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -199,16 +199,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010210433581_realestatev-1.resx">
-      <DependentUpon>202010210433581_realestatev-1.cs</DependentUpon>
+    <Folder Include="Views\Owner\" />
+    <Folder Include="Views\Rent\" />
+    <Folder Include="Views\Staff\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010230920598_realestateV1.resx">
+      <DependentUpon>202010230920598_realestateV1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010210448444_realestatev-2.resx">
-      <DependentUpon>202010210448444_realestatev-2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010210514364_realestate.resx">
-      <DependentUpon>202010210514364_realestate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010230934207_samplev1.resx">
+      <DependentUpon>202010230934207_samplev1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

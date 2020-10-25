@@ -69,10 +69,13 @@
             </div>
     
             <div class="form-group">
-                @Html.LabelFor(model => model.branchNoRef, "branchNoRef", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.branchNoRef, "Branch No", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownList("branchNoRef", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownListFor(model => model.branchNoRef, new SelectList(ViewBag.branchDetails, "branchNo", "branchNo"), "Select the branch")
                     @Html.ValidationMessageFor(model => model.branchNoRef, "", new { @class = "text-danger" })
+
+
+                  
                 </div>
             </div>
     

@@ -12,10 +12,10 @@
     <title>CreateBranch</title>
 </head>
 <body>
-    @using (Html.BeginForm()) 
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-        
+
         <div class="form-horizontal">
             <h4>Branch</h4>
             <hr />
@@ -27,7 +27,7 @@
                     @Html.ValidationMessageFor(model => model.branchNo, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -35,7 +35,7 @@
                     @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.city, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -43,7 +43,7 @@
                     @Html.ValidationMessageFor(model => model.city, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.postcode, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -51,7 +51,7 @@
                     @Html.ValidationMessageFor(model => model.postcode, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <br>
@@ -60,7 +60,7 @@
             </div>
         </div>
     }
-    
+
     <div>
         <br>
         @Html.ActionLink("Back to List", "Index")
