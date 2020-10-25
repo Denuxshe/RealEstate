@@ -18,8 +18,9 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.branch.Street)
+                @Html.DisplayNameFor(model => model.propertyNo)
             </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.owner.fName)
             </th>
@@ -47,7 +48,7 @@
     @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.branch.Street)
+                @Html.DisplayFor(modelItem => item.propertyNo)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.owner.fName)
